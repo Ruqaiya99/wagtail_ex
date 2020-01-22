@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load wagtailcore_tags %}
+{% block extra_css %}
+<style>
+  .mystyle{
+    text-align:justify;
+    text-justify:inter-word;
+  }
+  
+  
+</style> 
+{% endblock %}
+<body id="top">
+
+     <!-- {{ self.subtitle}} -->
+  <!-- End Top Background Image Wrapper -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <section class="hoc container clear" id="test"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        <h6 class="heading">Background And Need</h6>
+        
+      </div>
+      <div class="group">
+        <div class="one_half first">
+            
+             <div class="mystyle"> 
+            <b><p> {{ self.background|richtext }} </p></b>
+            </div>
+        </div>
+        <div class="one_half"><img class="inspace-10 borderedbox" src="{% static 'img/image.JPG' %}" alt=""></div>
+      </div>
+  
+         <!-- ################################################################################################ -->
+         <div class="sectiontitle">
+          <h6 class="heading">History</h6>
+          
+        </div>
+        <div class="group">
+          <div class="one_half first">
+            
+             <div class="mystyle">
+            <b><p>{{ self.history|richtext }}</p></b>
+            </div>
+            
+          </div>
+         
+          <div class="one_half"><img class="inspace-10 borderedbox" src="{% static 'img/history.JPG' %}" alt=""></div>
+        
+        </div>
+          </div>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper bgded overlay" style="background-image:url('{% static 'img/facultyy2.jpg' %}')">
+    <section class="hoc container clear"> 
+      <!-- #########################################################zz####################################### -->
+      
+      <ul class="nospace group">
+        <li class="one_quarter first">
+         
+        </li>
+        <li class="one_quarter">
+          
+        </li>
+        <li class="one_quarter">
+          
+        </li>
+        <li class="one_quarter">
+         
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </section>
+  
+  
+    
+    
+  
+  <!--*********-->
+  
+  
+    <div id="pageintro" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      
+        <h3 class="heading">Unnat Maharashtra Abhiyan</h3>
+        <p>तकनीकी संस्थाओं का ज्ञान - स्वैच्छिक संगठनों का अनुभव - सरकार के संसाधन
+          सभी को मिलाकर गांवों के विकास के लिए</p>
+        
+      
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <main class="hoc container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="sectiontitle">
+        
+      </div>
+      <ul class="nospace group services">
+        <li class="one_third first">
+          
+            <h6 class="heading">Vision</h6>
+            <b><p> Unnat Bharat Abhiyan is inspired by the vision of transformational change in rural development processes by leveraging knowledge <span id="dots">...</span>
+            <span id="more">institutions to help build the architecture of an Inclusive India. </span></p></b>
+            <footer><a class="btn" onclick="myfunction()" id="myBtn">Read More</a></footer>
+          
+        </li>
+        <li class="one_third">
+          
+            <h6 class="heading">Mission</h6>
+            <b><p>The Mission of Unnat Bharat Abhiyan is to enable higher educational institutions to work with the people of rural India in identifying development challenges <span id="dots1">...</span>
+            <span id="more1">and evolving appropriate solutions for accelerating sustainable growth. It also aims to create a virtuous cycle between society and an inclusive academic system by providing knowledge and practices for emerging professions and to upgrade the capabilities of both the public and the private sectors in responding to the development needs of rural India. </span></p></b>
+            <footer><a class="btn" onclick="myfunction1()" id="myBtn1">Read More</a></footer>
+          
+          
+        </li>
+        <li class="one_third">
+     
+            <h6 class="heading">Goals</h6>
+            <b><p> * To build an understanding of the development agenda within institutes of Higher Education and an institutional capacity and training relevant to national needs,<span id="dots2">...</span>
+            <span id="more2"> especially those of rural India.<br>* To re-emphasize the need for field work, stake-holder interactions and design for societal objectives as the basis of higher education.<br>
+              *To stress on rigorous reporting and useful outputs as central to developing new professions.<br>
+              *To provide rural India and regional agencies with access to the professional resources of the institutes of higher education, especially those that have acquired academic excellence in the field of science, engineering and technology, and management.<br>
+              *To improve development outcomes as a consequence of this research. To develop new professions and new processes to sustain and absorb the outcomes of research.<br>
+              *To foster a new dialogue within the larger community on science, society and the environment and to develop a sense of dignity and collective destiny.<br>
+  
+            </span></p></b>
+            <footer><a class="btn" onclick="myfunction2()" id="myBtn2">Read More</a></footer>
+          
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper bgded" style="background-image:url('{% static 'img/file.JPG' %}')">
+    <div class="hoc split clear">
+      <section> 
+        <!-- ################################################################################################ -->
+        <h2 class="heading">How You Can Participate in UBA?</h2>
+        <p>{{ self.participate|richtext }}</p>
+        <ul class="fa-ul">
+         
+          {% for myblock in page.participate_points %}
+              {% include_block myblock %}          
+          {% endfor %}
+         
+        </ul>
+        <p class="btmspace-30">For more information in this regard, you may please visit the UBA website and contact National Coordinator or Regional Coordinators (Mentoring Institutions).</p>
+        
+        <!-- ################################################################################################ -->
+      </section>
+    </div>
+  </div>
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="C:\Users\UMER\Desktop\chevesic\my.js"></script>
+  <script src="my.js"></script>
+  <script>
+    function myfunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      }
+      else {
+       
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    
+    }
+    }
+    </script>
+  
+  <script>     
+    function myfunction1() {
+      var dots = document.getElementById("dots1");
+      var moreText = document.getElementById("more1");
+      var btnText = document.getElementById("myBtn1");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      }
+      else {
+       
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    
+    }
+    }
+    </script>
+  
+  <script>
+    function myfunction2() {
+      var dots = document.getElementById("dots2");
+      var moreText = document.getElementById("more2");
+      var btnText = document.getElementById("myBtn2");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      }
+      else {
+       
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    
+    }
+    }
+  
+  
+  
+    </script>
+    {% block extra_js %}
+
+{% endblock %}
+
+{% endblock %}
