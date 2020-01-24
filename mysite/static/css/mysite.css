@@ -19,6 +19,134 @@ File: Layout CSS
 .row4, .row4 a{}
 .row5, .row5 a{}
 
+Header
+-----------------------*/
+
+.ht-right .lan-selector {
+	max-width: 142px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+
+.ht-right .lan-selector .ddcommon {
+	max-width: 142px;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none;
+	cursor: pointer;
+	padding: 0 20px;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddTitleText img {
+	padding-right: 5px;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddTitleText span {
+	font-size: 14px;
+	color: #252525;
+}
+
+.col-lg-8{
+	margin:auto;
+}
+
+.mt-2{
+	margin-top: .5rem!important;
+}
+
+.row2{
+	display:flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.mt-2 .row2 .headerlogo{
+	margin-top: 0;
+	margin-bottom: lrem;
+	margin-block-start: lem;
+	margin-block-end: lem;
+	margin-inline-end: 0px;
+}
+
+@media screen and (max-width: 425px)
+.headerlogo {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.text-center{
+	text-align:center!important;
+}
+
+.col-2{
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+}
+
+.col-8 {
+	flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+  padding-left: 15px;
+}
+
+.img-fluid{
+	max-width:100%;
+	height:auto;
+}
+
+.img{
+	vertical-align: middle;
+	border-style:none;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddArrow:before {
+	content: "3";
+	font-family: "ElegantIcons";
+	font-size: 14px;
+	color: #636363;
+	float: right;
+	position: relative;
+	right: 0;
+	line-height: 26px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild {
+	background: #fff;
+	max-width: 142px;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul {
+	width: 100%;
+	max-width: 142px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li {
+	line-height: 23px;
+	padding: 0px 10px;
+	list-style: none;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li img {
+	padding-right: 10px;
+}
+
+.ht-right .lan-selector .ddcommon .ddChild ul li span {
+	font-size: 13px;
+	color: #000;
+	letter-spacing: 0.325px;
+}
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
