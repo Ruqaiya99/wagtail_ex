@@ -3,7 +3,7 @@
 from wagtail.core import blocks
 from wagtail.core.blocks import RichTextBlock
 from wagtail.embeds.blocks import EmbedBlock
-
+from wagtail.documents.blocks import DocumentChooserBlock
 
 class TitleAndTextBlock(blocks.StructBlock):
     heading = blocks.CharBlock(classname="full title")
@@ -47,3 +47,28 @@ class participate_pointsBlock(blocks.StructBlock):
         template = "streams/participate_points.html"
         icon = "edit"
         label = "text"
+
+# class DocumentChooserBlock():
+
+    # class Meta:
+    #     template = "streams/documents.html"
+    #     icon = "edit"
+    #     label = "text"        
+class FlexBlock(blocks.StructBlock):
+    """document block"""
+
+    title = blocks.CharBlock(required=True)
+
+    points = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ("point", blocks.CharBlock(required=True, max_length=200)),
+                ("doc_upload",DocumentChooserBlock(required=True)),
+            ]
+        )
+    )
+
+    class Meta:  #noqa
+        template = "streams/flex_document.html"
+        icon="edit"
+        label="Presentation & Documents"

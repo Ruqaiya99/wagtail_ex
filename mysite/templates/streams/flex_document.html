@@ -1,0 +1,27 @@
+{% load wagtailcore_tags %}
+{% load static %}
+
+ 
+<div class="card">
+    <div class="card-heading active">
+        <a class="active" data-toggle="collapse" data-target="#collapseOne">
+            {{ self.title }}
+             
+        </a>
+    </div>
+    {% for i in self.points %}
+    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+        <div style="margin-left:40px;">
+            <ul>
+                <li>{{ i.point }}<a href="{{ i.doc_upload.url }}">Download</i></a></li>
+            </ul>
+           
+        </div>
+    </div>
+    {% endfor %}
+</div> 
+
+              
+                  
+            
+    

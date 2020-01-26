@@ -4,6 +4,7 @@ from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 # from wagtail.core.fields import RichTextField
+
 from wagtail.core.fields import StreamField
 from streams import blocks
 from wagtail.admin.edit_handlers import TabbedInterface, ObjectList
@@ -36,6 +37,7 @@ class HomePage(Page):
     class Meta:
          verbose_name = "About Us Page"
 #  *************
+
 
 
     
