@@ -4,6 +4,7 @@ from wagtail.core import blocks
 from wagtail.core.blocks import RichTextBlock
 from wagtail.embeds.blocks import EmbedBlock
 from wagtail.documents.blocks import DocumentChooserBlock
+from wagtail.images.blocks import ImageChooserBlock
 
 class TitleAndTextBlock(blocks.StructBlock):
     heading = blocks.CharBlock(classname="full title")
@@ -71,4 +72,17 @@ class FlexBlock(blocks.StructBlock):
     class Meta:  #noqa
         template = "streams/flex_document.html"
         icon="edit"
-        label="Presentation & Documents"
+        label=" Documents"
+
+class Flex_imgBlock(blocks.StructBlock):
+    """document block"""
+    
+    image = ImageChooserBlock(icon="image")
+    doc = DocumentChooserBlock(required=True)
+    
+   
+    class Meta:  #noqa
+        template = "streams/flex_presentation.html"
+        icon="edit"
+        label="Presentation"
+

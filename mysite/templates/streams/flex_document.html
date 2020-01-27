@@ -4,21 +4,22 @@
  
 <div class="card">
     <div class="card-heading active">
-        <a class="active" data-toggle="collapse" data-target="#collapseOne">
+        <a data-toggle="collapse" data-target="#a{{ forloop.counter }}">
             {{ self.title }}
-             
         </a>
     </div>
+    <div id="a{{ forloop.counter }}" class="collapse" data-parent="">
     {% for i in self.points %}
-    <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+    
         <div style="margin-left:40px;">
             <ul>
-                <li>{{ i.point }}<a href="{{ i.doc_upload.url }}">Download</i></a></li>
+                <li>{{ i.point }}<a href="{{ i.doc_upload.url }}"><i class="fa fa-download fa-2x" aria-hidden="true"></i></a></li>
             </ul>
            
-        </div>
-    </div>
+        </div  >
+    
     {% endfor %}
+</div>
 </div> 
 
               

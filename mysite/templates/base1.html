@@ -26,11 +26,37 @@
     <link rel="stylesheet" href="{% static 'css/jquery-ui.min.min.css' %}" type="text/css">
 
     <link rel="stylesheet" href="{% static 'css/styleflex.css' %}" type="text/css">
+
+    <!-- CSS style of presentation -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css">
  </head>
     <body class="{% block body_class %}{% endblock %}">
     {% wagtailuserbar %}
-    {% block content %}{% endblock %}
+    {% block content %}
+        
+    {% endblock %}
       {# Global javascript #}
+      <script type="text/javascript" src="{% static 'js/uma.js' %}"></script>
+      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+      <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+      <script src="{% static 'js/jquery.zoom.min.js' %}"></script>
+      <script src="{% static 'js/jquery.dd.min.js' %}"></script>
+      <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="{% static 'js/load-more-button.js' %}"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+      
+      
+
+
       {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}

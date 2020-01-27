@@ -9,7 +9,29 @@
 
 <body>
     <!-- Page Preloder -->
+     <!-- presentation_area_start  -->
+     <div class="popular_destination_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Presentations</h3><br><br>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 
+                {% for block in page.contents %}
+                    {% include_block block %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- popular_destination_area_end  -->
+
     
+   
 
    
    
@@ -36,10 +58,12 @@
     
     
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+   
     {% block extra_js %}
-{% endblock %}
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      
+    {% endblock %}
     
 {% endblock %}
     
