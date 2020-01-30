@@ -1,0 +1,108 @@
+
+{% extends "base1.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+
+    <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Workshops</h3><br><br>
+                       
+                    </div>
+                </div>
+            </div>
+
+    <div class="interior container clearfix">
+        <div class="row"> 
+            
+         {% for post in posts %}
+        <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox" >
+            <div class="item">
+                {% image post.blog_image fill-250x250 as blog_img %}
+                        <a href="{{ post.url }}">
+                <img src="{{ blog_img.url }}" alt="{{ blog_img.alt }}" style=' display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;margin-top:20px'>
+                </a>
+            <div class="blogTxt">
+                <div class="blogCategory">
+                <a href="{{ post.url }}">{{ custom_title }}</a>
+                </div>
+                <h2>Workshop </h2>
+                
+            </div>
+            </div>
+        </div>
+         {% endfor %} 
+        </div>
+    </div>   
+  
+{% endblock content %}  
+
+<!-- <div class="container">
+        {% for post in posts %}
+            <div class="row mt-5 mb-5">
+                <div class="col-sm-3">
+                    {% image post.blog_image fill-250x250 as blog_img %}
+                    <a href="{{ post.url }}">
+                        <img src="{{ blog_img.url }}" alt="{{ blog_img.alt }}">
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.custom_title }}</h2>
+                        {# @todo add a summary field to BlogDetailPage; make it a RichTextField with only Bold and Italic enabled. #}
+                        <a href="{{ post.url }}" class="btn btn-primary mt-4">Read More</a>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div> -->
+    <!-- <div class="popular_destination_area"> -->
+        <!-- <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Workshops</h3><br><br>
+                       
+                    </div>
+                </div>
+            </div> -->
+
+            <!--  -->
+    <!-- <div class="col-lg-4 col-md-6">
+        <div class="single_destination">
+            {% for post in posts %}
+            
+            <div class="thumb">
+                {% image post.blog_image fill-250x250 as blog_img %}
+                        <a href="{{ post.url }}">
+                            <img src="{{ blog_img.url }}" alt="{{ blog_img.alt }}" style=' display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 50%;margin-top:20px'>
+                           
+                        </a>
+                    </div>
+                <div class="content" style="padding-left:20px">
+                    
+                    <a href="{{ post.url }}">
+                        <h3>{{ post.custom_title }}</h3>
+                        {# @todo add a summary field to BlogDetailPage; make it a RichTextField with only Bold and Italic enabled. #}
+                       
+                       
+                </div>
+    
+            </div>
+        {% endfor %}        
+                    
+    
+           
+    </div>
+    
+
+

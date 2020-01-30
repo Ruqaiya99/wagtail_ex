@@ -17,37 +17,37 @@ class TitleAndTextBlock(blocks.StructBlock):
         label = "Title & Text"
 from wagtail.core import blocks
 
-# class RichtextBlock(blocks.RichTextBlock):
+class RichtextBlock(blocks.RichTextBlock):
     
-    #  class Meta:
-        #  template = "streams/richtext_block.html"
-        #  icon="doc-full"
-        #  label = "Full RichText"
-#   class SimpleRichtextBlock(blocks.RichTextBlock):
+    class Meta:
+        template = "streams/richtext_block.html"
+        icon="doc-full"
+        label = "Full RichText"
+class SimpleRichtextBlock(blocks.RichTextBlock):
+
+    def __init__(self, required=True, help_text=None, editor='default', features=None, validators=(), **kwargs):
+        super().__init__(**kwargs)
+        self.features = [
+            "bold",
+            "italic",
+            
+        ]
     
-    #  def __init__(self, required=True, help_text=None, editor='default', features=None, validators=(), **kwargs):
-        #  super().__init__(**kwargs)
-        #  self.features = [
-            #  "bold",
-            #  "italic",
-             
-        #  ]
-        
-    #  class Meta:
-        #  template = "streams/richtext_block.html"
-        #  icon="edit"
-        #  label = "Simple RichText"
+    class Meta:
+        template = "streams/richtext_block.html"
+        icon="edit"
+        label = "Simple RichText"
 
 
 class participate_pointsBlock(blocks.StructBlock):
-   
+
     text = blocks.CharBlock(required=True,max_length=255,null=True,blank=False)
-    # body = RichTextField(features=['h2', 'h3', 'bold', 'italic', 'link'])
+# body = RichTextField(features=['h2', 'h3', 'bold', 'italic', 'link'])
 
     class Meta:
-        template = "streams/participate_points.html"
-        icon = "edit"
-        label = "text"
+       template = "streams/participate_points.html"
+       icon = "edit"
+       label = "text"
 
 # class DocumentChooserBlock():
 
@@ -86,3 +86,29 @@ class Flex_imgBlock(blocks.StructBlock):
         icon="edit"
         label="Presentation"
 
+
+# class WorkshopBlock(blocks.StructBlock):
+#     """document block"""
+    
+#     image = ImageChooserBlock(icon="image")
+    
+   
+#     class Meta:  #noqa
+#         template = "streams/workshop_document.html"
+#         icon="edit"
+#         label="Workshop"
+
+# class ImageChooserBlock(blocks.StructBlock):
+
+   
+
+#     class Meta:  #noqa
+#         template = "workshop/workshop_.html"
+#         icon="edit"
+#         label="Workshop"
+
+# class DateTimeBlock(blocks.structBlock):
+
+
+#     class Meta:
+#         template = "streams/datetime"
